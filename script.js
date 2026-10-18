@@ -1,5 +1,3 @@
-//    1. MOBILE NAVIGATION
-
 const menuButton = document.getElementById("menu-toggle");
 const navMenu = document.getElementById("nav-menu");
 const navLinks = document.querySelectorAll(".nav-link");
@@ -43,24 +41,5 @@ window.addEventListener("scroll", function () {
         if (link.getAttribute("href") === "#" + currentSection) {
             link.classList.add("active");
         }
-    });
-});
-
-
-//    4. PROJECT EMAIL LINKS
-
-const projectLinks = document.querySelectorAll("[data-project]");
-
-projectLinks.forEach(function (link) {
-    link.addEventListener("click", function (event) {
-        event.preventDefault();
-
-        const projectName = link.getAttribute("data-project");
-        const subject = encodeURIComponent("Question about " + projectName);
-        const body = encodeURIComponent(
-            "Hi Akash,\n\nI would like to know more about your " + projectName + " project."
-        );
-
-        window.location.href = "mailto:akashnpatil2005@gmail.com?subject=" + subject + "&body=" + body;
     });
 });
